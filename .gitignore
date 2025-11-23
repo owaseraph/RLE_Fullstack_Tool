@@ -21,8 +21,7 @@ frontend/npm-debug.log
 frontend/yarn-error.log
 
 # Optional: Ignore the build folder if you want to rebuild on the server
-# If you want to deploy exactly what is on your PC, remove the line below.
-frontend/build/
+# If you want to deploy exactly what is on your PC, remove the line below.  
 
 # --- Environment ---
 # Even though venv is outside, keep this rule just in case you move it later
