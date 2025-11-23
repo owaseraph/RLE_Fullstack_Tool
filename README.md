@@ -2,12 +2,7 @@
 
 A Full-Stack Web Application for **Run-Length Encoding (RLE)** compression, featuring a high-performance React frontend and a secure Django backend.
 
-![Project Screenshot](image.png)
-# 🌌 CodeRun 2025 - RLE Encoder/Decoder
-
-A Full-Stack Web Application for **Run-Length Encoding (RLE)** compression, featuring a high-performance React frontend and a secure Django backend.
-
-![Project Screenshot](screenshot.png)
+![Project Screenshot]('screenshots/image.png')
 
 ## 🚀 About the Project
 This application allows users to compress and decompress text files using the RLE algorithm. It goes beyond a simple script by implementing a full user authentication system, history tracking database, and a responsive "Glassmorphism" UI with GPU-accelerated particle animations.
