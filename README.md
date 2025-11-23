@@ -32,7 +32,7 @@ If you want to run this locally, follow these steps:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/owaseraph/coderun-2025.git](https://github.com/owaseraph/RLE_Fullstack_Tool.git)
+git clone https://github.com/owaseraph/RLE_Fullstack_Tool.git
 cd coderun-2025
 ```
 ### 2. Backend Setup
