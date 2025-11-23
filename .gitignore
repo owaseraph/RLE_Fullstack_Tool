@@ -1,0 +1,36 @@
+# --- Python & Django ---
+# Ignore compiled python files (Junk files)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore the database (Keep this local, don't upload user data)
+db.sqlite3
+
+# Ignore collected static files (The ones generated for deployment)
+# Keep your 'static' folder, but ignore the 'staticfiles' folder if you run collectstatic
+staticfiles/
+
+# --- React & Frontend ---
+# CRITICAL: Ignore the massive node_modules folder
+frontend/node_modules/
+
+# Ignore debug logs
+frontend/npm-debug.log
+frontend/yarn-error.log
+
+# Optional: Ignore the build folder if you want to rebuild on the server
+# If you want to deploy exactly what is on your PC, remove the line below.
+frontend/build/
+
+# --- Environment ---
+# Even though venv is outside, keep this rule just in case you move it later
+venv/
+env/
+.env
+
+# --- System & Editor ---
+.vscode/
+.DS_Store
+Thumbs.db

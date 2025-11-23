@@ -1,0 +1,52 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Coderun!</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/grid_bg.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'programming.png' %}">
+</head>
+
+<body>
+    <div class="animation-wrapper">
+        <div class="horizon-glow"></div>
+        <div class="grid-floor"></div>
+        
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+    <div class="card">
+        <h1>CodeRun 2025</h1>
+        <p style="color:#ccc" margin-bottom: 20px>Please log in to access the RLE Tool</p>
+
+
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required autofocus>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <div style="margin-top: 20px; font-size: 0.9rem;">
+            <p>Don't have an account?</p>
+            <a href="{% url 'register' %}">Create one here</a>
+        </div>
+    </div>
+</body>
+</html>

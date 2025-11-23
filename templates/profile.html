@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - CodeRun 2025</title>
+    <link rel="icon" type="image/png" href="{% static 'programming.png' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/grid_bg.css' %}">
+    
+    <style>
+        /* Specific overrides for the profile page */
+        .profile-header {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .info-group {
+            text-align: left;
+            margin-bottom: 15px;
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .value {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: #6de7ff; /* Cyan */
+        }
+        .back-btn {
+            background: transparent;
+            border: 1px solid #4af626;
+            color: #4af626;
+        }
+        .back-btn:hover {
+            background: rgba(74, 246, 38, 0.1);
+            box-shadow: 0 0 10px rgba(74, 246, 38, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation-wrapper">
+        <div class="horizon-glow"></div>
+        <div class="grid-floor"></div>
+        <div class="particles">
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="profile-header">
+            <h1>User Profile</h1>
+            <p style="color: #ccc;">Identity Verified</p>
+        </div>
+
+        <div class="info-group">
+            <span class="label">Username</span>
+            <span class="value">{{ user.username }}</span>
+        </div>
+
+        <div class="info-group">
+            <span class="label">Date Joined</span>
+            <span class="value">{{ user.date_joined|date:"F j, Y" }}</span>
+        </div>
+
+        <div class="info-group">
+            <span class="label">Security</span>
+            <span class="value" style="color: #aaa; font-size: 0.9rem;">Password: ********</span>
+        </div>
+
+        <a href="{% url 'rle_tool' %}">
+            <button class="back-btn">← Back to Tool</button>
+        </a>
+
+        <a href="{% url 'logout' %}">
+            <button style="background: #ff4444; margin-top: 10px;">Log Out</button>
+        </a>
+    </div>
+</body>
+</html>
