@@ -274,13 +274,13 @@
           <div className="mode-switch">
             <button 
               className={mode === 'decode' ? 'active' : ''} 
-              onClick={() => {setMode('decode'); setData(null); setError(null); setInputText(''); setExecTime(null); setStats(null);}}
+              onClick={() => {setMode('decode'); setData(null); setError(null); setExecTime(null); setStats(null);}}
             >
               Decode
             </button>
             <button 
               className={mode === 'encode' ? 'active' : ''} 
-              onClick={() => {setMode('encode'); setData(null); setError(null); setInputText(''); setExecTime(null); setStats(null);}}
+              onClick={() => {setMode('encode'); setData(null); setError(null); setExecTime(null); setStats(null);}}
             >
               Encode
             </button>
