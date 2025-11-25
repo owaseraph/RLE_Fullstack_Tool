@@ -74,9 +74,14 @@
             <span class="value">{{ user.date_joined|date:"F j, Y" }}</span>
         </div>
 
-        <div class="info-group">
-            <span class="label">Security</span>
-            <span class="value" style="color: #aaa; font-size: 0.9rem;">Password: ********</span>
+        <div class="info-group" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <span class="label">Security</span>
+                <span class="value" style="color: #aaa; font-size: 0.9rem;">Password: ********</span>
+            </div>
+            <a href="{% url 'password_change' %}" style="font-size: 0.8rem; color: #ffbd2e;">
+                Change
+            </a>
         </div>
 
         <a href="{% url 'rle_tool' %}">
@@ -86,6 +91,8 @@
         <a href="{% url 'logout' %}">
             <button style="background: #ff4444; margin-top: 10px;">Log Out</button>
         </a>
+    <div class="footer-signature">&copy; 2025 Seraph</div>
+
     </div>
 </body>
 </html>

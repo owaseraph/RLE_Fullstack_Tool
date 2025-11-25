@@ -197,8 +197,6 @@
       })
       .then(response => {
           if (response.ok) {
-              // Optimistic UI Update:
-              // Remove the item from the screen immediately without waiting for a reload
               setHistory(prevHistory => prevHistory.filter(item => item.id !== id));
           } else {
               console.error("Failed to delete");
@@ -394,6 +392,7 @@
               </div>
             )}
         </div>
+        <div className="footer-signature">© 2025 Seraph</div>
       </div>
     );
   }

@@ -45,5 +45,6 @@ urlpatterns = [
     path('api/get_history/', get_history, name='get_history'),
     path('api/delete_history/<int:item_id>/', delete_history_item, name='delete_history'),
     path('profile/', views.profile_view, name='profile'),
-    
+    path('password_change/', auth_views.PasswordChangeView.as_view(template_name = 'password_change.html'), name = 'password_change'),
+    path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name = 'password_change_done.html'), name = 'password_change_done')
     ]
